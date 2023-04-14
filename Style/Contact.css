@@ -1,0 +1,145 @@
+body {
+    background-color: #081b29;
+    color: #fff;
+}
+
+/* id-selector */
+header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    float: inline-end;
+    background: transparent;
+    
+}
+
+.navbar a {
+    font-size: 20px ;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #ededed;
+    
+}
+
+.navbar a:hover {
+    color: #00abf0; /*hover effect*/
+}
+
+.navbar .active {
+    color: #00abf0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    text-decoration: underline;
+    
+}
+
+.home-item a:hover {
+    color: #081b29; /*hover effect*/
+}
+
+.home-item {
+    
+    margin-top: 20px;
+    margin-left: 1250px;
+    bottom: 40px;
+    width: 170px;
+    justify-content: space-between;
+}
+
+.home-item a {
+    margin-right: 10px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+/* styling form */
+form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/* style input boxes */
+.input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* footer styling */
+footer {
+    
+    background: linear-gradient(to bottom, #081b29, #00abf0);
+    
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin-left: 15px;
+    }
+
+    .home-item {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    .input,
+    textarea {
+        width: 100%;
+    }
+}

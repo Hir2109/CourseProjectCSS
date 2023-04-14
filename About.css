@@ -1,0 +1,99 @@
+body {
+    background-color: #081b29;
+    color: #fff;
+}
+
+/* element-selector */
+header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    float: inline-end;
+    background: transparent;
+    
+}
+
+.navbar a {
+    font-size: 20px ;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #ededed;
+    
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+.navbar .active {
+    color: #00abf0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    text-decoration: underline;
+    color: #00abf0;
+}
+
+.content h2 {
+    color: #00abf0;
+}
+
+.content {
+    margin-bottom: 30px;
+}
+
+.Projects {
+    display: grid; /* adding grid to create layout */
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 20px;
+    color: #081b29;
+   }
+
+.Project1 {
+    background-color: #00abf0;
+    border: #fff solid 3px;
+    text-align: center;
+ }
+
+.Project2 {
+    background-color: #efffb9;
+    border: #fff solid 3px;
+    text-align: center;
+ }
+
+.Project3 {
+    background-color:  #efffb9;
+    border: #fff solid 3px;
+    text-align: center;
+ }
+/* for button hover */
+button:hover {
+    color: #00abf0;
+ }
+
+.Project2 button, .Project4 button {
+    margin-bottom: 10px;
+ }
+
+.Project4 {
+    background-color: #00abf0;
+    border: #fff solid 3px;
+    text-align: center;
+ }
+
+ /* Add media query for small screens */
+@media screen and (min-width: 768px) {
+    .Projects {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on medium screens */
+    }
+}

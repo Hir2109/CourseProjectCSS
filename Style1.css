@@ -1,0 +1,246 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ /* Reset default margin and padding for body */
+ body {
+    font-family: 'Open Sans', sans-serif; /* Apply external web font to body text */
+    background-color: #081b29;
+    color: #ededed;
+}
+/* Style for header */
+header {
+    
+    position: fixed; /* header is set fixed*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: transparent;
+}
+
+.navbar a {
+    font-size: 20px ;  
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #ededed;
+    transition: .3s;
+    
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+/* id-selector */
+.navbar .active {
+    color: #00abf0;
+}
+
+.home {
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    padding: 0 10%;
+} 
+
+/* class-selector */
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+/*This is used for transition effect*/
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+/* descendent-selector */
+.home-content p {
+    position: relative;
+    font-size: 18px;
+    
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-item a:hover {
+    color: #081b29;
+}
+
+.home-item {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.home-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards; /*animation is added to enhance view */
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+.home-item a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.home-item a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background: #00abf0;
+}
+
+.home-item a:hover::before {
+    width: 100%;
+}
+
+/*.mypic img {
+    /* width: 300px;
+    margin: 0 1em;
+    float: right;
+    margin-right: 10px;
+    border-radius: 50%; */
+    /* width: 180px;
+    height: 250px; */
+    /* display: flex; 
+    width: 200px;
+    margin-left: 200px;
+    border-radius: 50%;
+    
+*/
+
+.mypic {
+    width: 250px; /* Set the width of the container */
+    height: 250px; /* Set the height of the container */
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Hide any content that exceeds the circular border */
+    margin-left: 100px;
+}
+
+.mypic img {
+    width: 100%; /* Set the width of the image to fill the container */
+    height: 100%; /* Set the height of the image to fill the container */
+    object-fit: cover; /* Preserve aspect ratio and cover the container */
+}
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Styles for smaller screens */
+    header {
+      padding: 20px 5%; /* Reduce padding for header */
+    }
+  
+    .home-content {
+        max-width: 100%; /* Set max width to 100% for smaller screens */
+    }
+    .navbar a {
+      margin-left: 20px; /* Reduce margin for navbar links */
+    }
+  
+    .home-content h1 {
+        font-size: 40px; /* Decrease font size for smaller screens */
+    }
+
+    .home-content h3 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    .home-content p {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+    .home {
+      padding: 0 5%; /* Reduce padding for home section */
+    }
+  
+    .mypic {
+      margin-left: 0; /* Remove margin for profile picture */
+      margin-right: auto; /* Center align the container */
+      
+    }
+  }
+  
