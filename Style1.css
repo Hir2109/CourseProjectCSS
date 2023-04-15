@@ -238,9 +238,10 @@ header {
     }
   
     .mypic {
-      margin-left: 0; /* Remove margin for profile picture */
-      margin-right: auto; /* Center align the container */
-      
+      max-width: none;
+      width: 950px;
+      height: 150px;
+      margin-left: 100px; /* Set the left margin for larger screens */
     }
   }
   
